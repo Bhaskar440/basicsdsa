@@ -1,0 +1,37 @@
+Problem Statement: Given a String, write a program to remove vowels from a given String.
+
+Examples:
+
+Example 1:
+Input: Str = “take u forward”
+Output: tk  frwrd
+Explanation: All vowels are removed from the given String.
+
+Example 2:
+Input: Str = “I am very happy today”
+Output:  m vry happy tdy
+Explanation: All vowels are removed from the given String.
+
+code:--
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        String s = "take u forward";
+        char a= 'a';
+        char e = 'e';
+        char i = 'i';
+        char o = 'o';
+        char u = 'u';
+        for(int j=0;j<s.length();j++)
+        {
+            if(s.charAt(j)!=a && s.charAt(j)!=e && s.charAt(j)!=i && s.charAt(j)!=o && s.charAt(j)!=u)
+            {
+               System.out.print(s.charAt(j));
+            }
+      
+        }
+        
+    }
+}
