@@ -1,0 +1,41 @@
+Problem Statement: Given a string, write a program to count the number of vowels, consonants, and spaces in that string.
+
+Examples:
+
+Example 1:
+Input: string str=”Take u forward is Awesome”
+Output: 
+Vowels: 10
+Consonants: 11
+White spaces: 4
+
+
+class Main {
+    public static void main(String[] args) {
+        String s = "Take u forward is Awesome";
+        int vowels = 0;
+        int consonants = 0;
+        int whitespaces = 0;
+        s= s.toLowerCase();
+        for(int j=0;j<s.length();j++)
+        {
+            char ch = s.charAt(j);
+            if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u')
+            {
+                vowels++;
+            }
+            else if(ch>='a' && ch<='z')
+            {
+                consonants++;
+            }
+            else 
+            {
+                whitespaces++;
+            }
+        }
+        System.out.println("vowels:"+vowels);
+        System.out.println("consonants:"+consonants);
+        System.out.println("whitespaces:"+whitespaces);
+        
+    }
+}
