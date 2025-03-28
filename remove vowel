@@ -1,0 +1,19 @@
+Example 1:
+Input: Str = “take u forward”
+Output: tk  frwrd
+Explanation: All vowels are removed from the given String.
+//
+
+class Main {
+    public static void main(String[] args) {
+        String str = "take you forward";
+        for(int i=0;i<str.length();i++)
+        {
+            char ch = str.charAt(i);
+            if(ch!='a' && ch!='e' && ch!='i' && ch!='o' && ch!='u') // here we took and condition so that none of the vowel would match , haven't put the || operator becasue loop will not be able to check so optional condition
+            {
+                System.out.print(ch);
+            }
+        }
+    }
+}
