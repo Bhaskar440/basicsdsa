@@ -1,0 +1,23 @@
+Example 1:
+Input: N = 102003
+Output: 112113
+Explanation: The 2nd,4th and 5th position from left contain 0.The resultant integer has replaced the 0’s in those  positions with 1.
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        int n = 102003;
+        String str = String.valueOf(n); // Correct way to convert int to String instead of str.toString()
+        
+        StringBuilder sb = new StringBuilder(str);      // here StringBuilder is used which is used for operation like concatenation in a string as normal strings are immutable
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == '0') {
+                sb.setCharAt(i, '1');
+            }
+        }
+        
+        int k = Integer.parseInt(sb.toString());          // here we converted string to integer
+        System.out.print(k);
+    }
+}
