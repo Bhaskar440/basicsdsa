@@ -1,0 +1,24 @@
+//java code for displaying second largest and second smallest element of an array 
+import java.util.Arrays;
+
+public class tcs {
+    public static void main(String[] args) {
+        int arr[] = {1, 2, 4, 6, 7, 5};
+        int temp = 0;
+
+        // Sorting the array using bubble sort
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+        // Second smallest and second largest
+        System.out.println("Second Smallest Element: " + arr[1]);
+        System.out.println("Second Largest Element: " + arr[arr.length - 2]);
+    }
+}
